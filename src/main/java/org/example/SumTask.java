@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class SumTask {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         SumTask sumTask = new SumTask();
         int[] inputArray = new int[] {3,4,5,5,8};
 
@@ -28,22 +28,3 @@ public class SumTask {
         return uniqueSum;
     }
 }
-
-/*
-3,4,5,5,8
-
-3+4=7
-3+5=8
-3+5=8
-3+8=11
-
-4+5=9
-4+5=9
-4+8=12
-
-5+5=10
-5+8=13
-
-5+8=13
-
-*/
