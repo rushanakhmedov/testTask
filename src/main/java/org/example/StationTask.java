@@ -23,14 +23,11 @@ public class StationTask {
         for (Station station : stationList) {
             String stationName = station.getName();
             String twoFirstLetters = stationName.substring(0, 2);
-            if (stationMap.containsKey(twoFirstLetters)) {
-                List<Station> stationsListFromMap = stationMap.get(twoFirstLetters);
-                stationsListFromMap.add(station);
-            } else {
-                List<Station> stationsListFromMap = new ArrayList<>();
-                stationsListFromMap.add(station);
-                stationMap.put(twoFirstLetters, stationsListFromMap);
+            if (!stationMap.containsKey(twoFirstLetters)) {
+                stationMap.putIfAbsent(twoFirstLetters, new ArrayList<>());
             }
+            List<Station> stationsListFromMap = stationMap.get(twoFirstLetters);
+            stationsListFromMap.add(station);
         }
     }
 
