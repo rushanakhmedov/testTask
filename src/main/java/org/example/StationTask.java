@@ -20,7 +20,6 @@ public class StationTask {
     }
 
     private StationTask(List<Station> stationList) {
-        // TODO
         for (Station station : stationList) {
             String stationName = station.getName();
             String twoFirstLetters = stationName.substring(0, 2);
@@ -33,7 +32,6 @@ public class StationTask {
                 stationMap.put(twoFirstLetters, stationsListFromMap);
             }
         }
-        System.out.println("test");
     }
 
     private Collection<Station> getStationsByTwoFirstLetters(String prefix) {
